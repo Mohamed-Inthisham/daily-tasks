@@ -31,11 +31,14 @@
                         <th>ID</th>
                         <th>Task</th>
                         <th>Completed</th>
+
+                        @foreach($tasks as $task)
                         <tr>
-                            <td>1</td>
-                            <td>Sample Task</td>
-                            <td>Not Yet</td>
+                            <td>{{$task->id}}</td>
+                            <td>{{$task->task}}</td>
+                            <td>{{$task->is_completed}}</td>
                         </tr>
+                        @endforeach
                     </table>
                 </div>
             </div>
