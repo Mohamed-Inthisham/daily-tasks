@@ -41,7 +41,7 @@
                                 @if($task->is_completed)
                                     <button class="btn btn-success">Completed</button>
                                 @else
-                                    <button class="btn btn-danger">Not Completed</button>
+                                    <button class="btn btn-secondary">Not Completed</button>
                                 @endif
                             </td>
                             <td>
@@ -50,7 +50,9 @@
                                 @else
                                 <a href="update-as-not-completed/{{$task->id}}" class="btn btn-warning">Mark as not completed</a>
                                 @endif
+                                <a href="delete-tasks/{{$task->id}}" class="btn btn-danger">Delete</a>
                             </td>
+                            
                         </tr>
                         @endforeach
                     </table>
