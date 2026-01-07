@@ -11,4 +11,5 @@ Route::get('/', function () {
 
 Route::post('/save-tasks', [TaskController::class, 'saveTasks']);
 
-Route::get('/update-task/{id}', [TaskController::class, 'updateTask']);
+Route::get('/update-as-completed/{id}', [TaskController::class, 'updateTaskCompleted']);
+Route::get('/update-as-not-completed/{id}', [TaskController::class, 'updateTaskNotCompleted']);
