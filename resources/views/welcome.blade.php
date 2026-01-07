@@ -50,6 +50,7 @@
                                 @else
                                 <a href="update-as-not-completed/{{$task->id}}" class="btn btn-warning">Mark as not completed</a>
                                 @endif
+                                <a href="update-nav/{{$task->id}}" class="btn btn-info">Update</a>
                                 <a href="delete-tasks/{{$task->id}}" class="btn btn-danger">Delete</a>
                             </td>
                             
