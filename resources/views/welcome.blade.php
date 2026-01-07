@@ -31,6 +31,7 @@
                         <th>ID</th>
                         <th>Task</th>
                         <th>Completed</th>
+                        <th>Action</th>
 
                         @foreach($tasks as $task)
                         <tr>
@@ -42,6 +43,9 @@
                                 @else
                                     <button class="btn btn-danger">Not Completed</button>
                                 @endif
+                            </td>
+                            <td>
+                                <a href="update-task/{{$task->id}}" class="btn btn-primary">Mark as completed</a>
                             </td>
                         </tr>
                         @endforeach

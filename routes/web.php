@@ -9,4 +9,6 @@ Route::get('/', function () {
 });
 
 
-Route::post('/save-tasks', [TaskController::class, 'savetasks']);
+Route::post('/save-tasks', [TaskController::class, 'saveTasks']);
+
+Route::get('/update-task/{id}', [TaskController::class, 'updateTask']);

@@ -7,7 +7,7 @@ use App\Models\task;
 
 class TaskController extends Controller
 {
-    public function savetasks(Request $request){
+    public function saveTasks(Request $request){
 
    
 
@@ -22,6 +22,14 @@ class TaskController extends Controller
         $data=Task::all();
         return view('welcome')->with('tasks',$data);
         
+
+    }
+
+    public function updateTask($id){
+        $task=Task::find($id);
+        $task->is_completed=true;
+        $task->save();
+        return redirect('/');
 
     }
 }
